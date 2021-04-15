@@ -68,14 +68,14 @@ const Login = (props) => {
   return (
     <>
       {DidRedirect()}
-      <form className="flex flex-col justify-center items-center p-3 md:p-10  h-auto w-auto md:mt-20 shadow-md rounded-xl bg-gray-50">
+      <form className="form-body ">
         <input
           type="email"
           id=""
           placeholder="Email"
           value={values.email}
           onChange={handelChange("email")}
-          className=" outline-none w-full mx-10 mb-6 h-10  ring-2 ring-gray-200 rounded-md p-4 text-gray-500 focus:ring-2 focus:ring-blue-300 "
+          className="input-text"
         />
         <input
           type="password"
@@ -83,7 +83,7 @@ const Login = (props) => {
           value={values.password}
           placeholder="Password"
           onChange={handelChange("password")}
-          className=" outline-none w-full mx-10 mb-6 h-10  ring-2 ring-gray-200 rounded-md p-4 text-gray-500 focus:ring-2 focus:ring-blue-300 "
+          className="input-text"
         />
         <input
           type="button"

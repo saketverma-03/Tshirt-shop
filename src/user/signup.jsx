@@ -2,18 +2,18 @@ import React from "react";
 
 const signin = (props) => {
   return (
-    <form className="flex p-10 flex-col justify-center items-center h-auto w-1/2 max-w-md mt-20 shadow-md rounded-xl bg-gray-50">
+    <form className="form-body">
       <input
         type="email"
         id=""
         placeholder="Email"
-        className=" outline-none w-full mx-10 mb-6 h-10  ring-2 ring-gray-200 rounded-md p-4 text-gray-500 focus:ring-2 focus:ring-blue-300 "
+        className="input-text"
       />
       <input
         type="password"
         id=""
         placeholder="Password"
-        className=" outline-none w-full mx-10 mb-6 h-10  ring-2 ring-gray-200 rounded-md p-4 text-gray-500 focus:ring-2 focus:ring-blue-300 "
+        className="input-text"
       />
       <input
         type="button"
