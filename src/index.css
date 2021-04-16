@@ -4,9 +4,9 @@
 
 @layer components {
   .form-body {
-    @apply flex flex-col justify-center items-center p-3 md:p-10  h-auto w-auto md:mt-20 shadow-md rounded-xl bg-gray-50;
+    @apply flex flex-col justify-center items-center p-3 md:p-10  h-auto w-auto  shadow-md rounded-xl bg-gray-50;
   }
   .input-text {
-    @apply outline-none w-full mx-10 mb-6 h-10  ring-2 ring-gray-200 rounded-md p-4 text-gray-500 focus:ring-2 focus:ring-blue-300;
+    @apply outline-none w-full  h-10  ring-2 ring-gray-200 rounded-md p-4 text-gray-500 focus:ring-2 focus:ring-blue-300;
   }
 }

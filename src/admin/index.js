@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 
 //lOCAL IMPORTS
-import AdminRoute from "../auth/helper/AdminRoutes";
+import { AdminRoute } from "../server";
 import { headerContext } from "../context";
-// import Category from "./Category";
+import Category from "./Category";
 // import Product from "./Product";
 
 import { Base } from "./components";
@@ -23,7 +23,7 @@ const AdminDashBoard = (props) => {
       <Base>
         <Switch>
           <AdminRoute exact path="/admin" component={Home} />
-          {/* <AdminRoute exact path="/admin/createCategory" component={Category} /> */}
+          <AdminRoute exact path="/admin/category" component={Category} />
           {/* <AdminRoute exact path="/admin/createProduct" component={Product} /> */}
         </Switch>
       </Base>
