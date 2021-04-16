@@ -1,0 +1,20 @@
+.anim2 {
+  animation: tab ease-in-out 1s infinite forwards;
+}
+
+@keyframes tab {
+  0% {
+    transform: translateY(0px);
+    position: absolute;
+  }
+  50% {
+    transform: scale(-1.2);
+    margin: 0 1rem;
+
+    position: relative;
+  }
+  100% {
+    transform: scale(1);
+    position: absolute;
+  }
+}
