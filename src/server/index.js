@@ -1,9 +1,25 @@
 // Authantication
-export { signin } from "./auth/authApi";
-export { signup } from "./auth/authApi";
-export { signout } from "./auth/authLogic";
-export { authanticate } from "./auth/authLogic";
-export { isAuthanticated } from "./auth/authLogic";
+export { signup, signin } from "./auth/authApi";
+export { signout, authanticate, isAuthanticated } from "./auth/authLogic";
+
 // Protected Routes
 export { default as AdminRoute } from "./Routes/AdminRoutes";
 export { default as PrivateRoute } from "./Routes/PrivateRoutes";
+
+//Admin only apis
+export {
+  createCategory,
+  getCategorys,
+  updateCategory,
+  deleteCategory,
+} from "./admin/categoryApi";
+
+export {
+  getProducts,
+  createProduct,
+  updateProduct,
+  deleteProduct,
+} from "./admin/productApi";
+
+// Public Apis
+export { getProduct, getCategorys as getAllCategory } from "./public/product";
