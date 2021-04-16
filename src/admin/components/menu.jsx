@@ -14,10 +14,10 @@ const Menu = () => {
   const TabItem = ({ name, to }) => (
     <li className="p-1 text-white w-full text-md mb-3 ">
       <Link
-        className="transition duration-300 rounded-md py-2 pr-28 pl-4  w-full  focus:bg-blue-600 focus:shadow-2xl  hover:bg-blue-900 "
-        to="#"
+        className="transition duration-300 md:py-2 md:pr-28 md:pl-4  w-full rounded-md focus:bg-blue-600 focus:shadow-2xl hover:bg-blue-900 "
+        to={to}
       >
-        Products
+        {name}
       </Link>
     </li>
   );
@@ -25,20 +25,23 @@ const Menu = () => {
   // TODO: animate drom pdown
   return (
     <>
-      <div className="flex md:hidden duration-500 justify-center">
-        <span className="text-center text-3xl font-mono font-bold text-white">
-          AdminPannel
-        </span>
-        <button className="md:hidden" onClick={handleClick}>
-          Ok
-        </button>
-      </div>
+      <button
+        className="fixed ml-3 mt-3 px-3 py-2 bg-purple-800 text-red-50 rounded-lg"
+        onClick={handleClick}
+      >
+        Ok
+      </button>
       {menu && (
         <>
-          <div className="transfor, duration-500 transition-transform flex  items-center flex-col  h-full md:w-2/12 space-y-6 md:py-2 pt-4 bg-gray-800">
-            <ul className=" p-2 content-center font-semibold text-white text-center space-y-2 list-none w-full bg-indigo-300 md:bg-opacity-0">
+          <div className="overflow-hiddenq md:relative md:col-start-1 md:col-end-3 transfor md: duration-500 transition-transform flex  items-center flex-col  h-full  space-y-6 md:py-2 pt-4 bg-gray-800">
+            <span className="flex md:hidden  duration-500 justify-center">
+              <span className="text-center text-3xl font-mono font-bold text-white">
+                AdminPannel
+              </span>
+            </span>
+            <ul className="content-center md:h-full w-full p-2 space-y-2 list-none md:bg-opacity-0 font-semibold text-white text-center">
               <TabItem name="Products" to="/" />
-              <TabItem name="Category" to="/" />
+              <TabItem name="Category" to="/admin/category" />
             </ul>
           </div>
         </>
