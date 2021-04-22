@@ -91,21 +91,24 @@ function Home(props) {
   return (
     <div className=" flex-1 h-full grid grid-cols-1 md:grid-cols-12 md:grid-rows-none">
       <div className="h-full md:col-span-3 md:row-span-full bg-indigo-50 ">
-        <h1 className="text-sm text-gray-600">Filters</h1>
+        <ol className="flex flex-col ml-10 mt-10 flex-1 space-y-3 text-black   font-sans text-sm ">
+          <h1 className="text-md font-bold text-gray-400">Filters</h1>
 
-        <ol className="flex flex-col ml-10 mt-10 flex-1 space-y-3 text-black cursor-pointer  font-sans text-sm ">
-          <h1 className="text-lg text-gray-600">
-            <button onClick={() => shortByCategory("")}>
-              {"All products"}
-            </button>
-          </h1>
+          <button
+            className="cursor-pointer text-lg text-left text-gray-600 hover:text-indigo-400 focus:border-none focus:outline-none "
+            onClick={() => shortByCategory("")}
+          >
+            {"All products"}
+          </button>
           {categorys.map((item) => {
             return (
-              <h1 key={item._id} className="text-lg text-gray-600">
-                <button onClick={() => shortByCategory(item._id)}>
-                  {item.name}
-                </button>
-              </h1>
+              <button
+                key={item._id}
+                className="cursor-pointer text-lg text-left text-gray-600 hover:text-indigo-400 focus:border-none focus:outline-none "
+                onClick={() => shortByCategory(item._id)}
+              >
+                {item.name}
+              </button>
             );
           })}
         </ol>
