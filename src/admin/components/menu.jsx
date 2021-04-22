@@ -33,15 +33,16 @@ const Menu = () => {
       </button>
       {menu && (
         <>
-          <div className="overflow-hiddenq md:relative md:col-start-1 md:col-end-3 transfor md: duration-500 transition-transform flex  items-center flex-col  h-full  space-y-6 md:py-2 pt-4 bg-gray-800">
+          <div className="md:overflow-hiddenq md:relative md:col-start-1 md:col-end-3 transfor md: duration-500 transition-transform flex  items-center flex-col  h-full  space-y-6 md:py-2 pt-4 bg-gray-800">
             <span className="flex md:hidden  duration-500 justify-center">
               <span className="text-center text-3xl font-mono font-bold text-white">
                 AdminPannel
               </span>
             </span>
             <ul className="content-center md:h-full w-full p-2 space-y-2 list-none md:bg-opacity-0 font-semibold text-white text-center">
-              <TabItem name="Products" to="/" />
               <TabItem name="Category" to="/admin/category" />
+              <TabItem name="Products" to="/admin/products" />
+              <TabItem name="ManageProducts" to="/admin/manageProducts" />
             </ul>
           </div>
         </>

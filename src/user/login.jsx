@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { authanticate, isAuthanticated, signin } from "../auth/helper";
+import { authanticate, isAuthanticated, signin } from "../server";
 import { Redirect } from "react-router-dom";
 
 const Login = (props) => {
