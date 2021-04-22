@@ -68,30 +68,35 @@ const Login = (props) => {
   return (
     <>
       {DidRedirect()}
-      <form className="form-body ">
-        <input
-          type="email"
-          id=""
-          placeholder="Email"
-          value={values.email}
-          onChange={handelChange("email")}
-          className="input-text"
-        />
-        <input
-          type="password"
-          id=""
-          value={values.password}
-          placeholder="Password"
-          onChange={handelChange("password")}
-          className="input-text"
-        />
-        <input
-          type="button"
-          value="Login"
-          onClick={onSubmit}
-          className="outline-none border-none px-4 py-2 text-white bg-blue-500 shadow-xl rounded-md hover:bg-blue-400 focus:shadow-sm "
-        />
-      </form>
+      <div className="flex flex-col   w-full h-full justify-center items-center bg-indigo-50 lg:w-1/3">
+        <h1 className="mb-10 text-gray-70 text-4xl font-sans font-bold ">Login</h1>
+        <form className="form-body rounded-md mb-5 ">
+          <input
+            type="email"
+            id=""
+            placeholder="Email"
+            value={values.email}
+            onChange={handelChange("email")}
+            className="input-text my-4"
+          />
+          <input
+            type="password"
+            id=""
+            value={values.password}
+            placeholder="Password"
+            onChange={handelChange("password")}
+            className="input-text mb-4"
+          />
+          <input
+            type="button"
+            value="Login"
+            onClick={onSubmit}
+            className="outline-none border-none px-4 py-2 text-white bg-blue-500 shadow-xl rounded-md hover:bg-blue-400 focus:shadow-sm "
+          />
+        </form>
+        <p className="my-5">OR</p>
+        <button className="border-none focus:outline-none outline-none active:translate-y-1  active:bg-indigo-700 transform-gpu ease-in-out duration-200 hover:-translate-y-  bg-indigo-600 text-white py-2 px-4 rounded-md hover:shadow-xl hover:bg-indigo-900 " >SignUp</button>
+      </div>
     </>
   );
 };

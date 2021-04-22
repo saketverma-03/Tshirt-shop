@@ -8,7 +8,7 @@ import { Home, Login, Signup } from "./user";
 import Admin from "./admin";
 
 // Protected Routes
-import { AdminRoute, PrivateRoute } from "./server";
+import { AdminRoute } from "./server";
 
 // Other stuff
 import { Base } from "./components";

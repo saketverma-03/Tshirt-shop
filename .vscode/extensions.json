@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "github.github-vscode-theme",
+        "coenraads.bracket-pair-colorizer",
+        "esbenp.prettier-vscode",
+        "wayou.vscode-todo-highlight"
+    ]
+}
