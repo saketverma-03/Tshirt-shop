@@ -15,7 +15,7 @@ export {
 } from "./admin/categoryApi";
 
 export {
-  getProducts,
+  getAllProducts,
   createProduct,
   updateProduct,
   deleteProduct,
