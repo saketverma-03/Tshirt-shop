@@ -9,6 +9,9 @@ module.exports = {
   variants: {
     extend: {
       // listStyleType: ['hover', 'focus'],
+      backgroundColor: ["active"],
+      transform: ["active"],
+      translate:["active"]
     },
   },
   plugins: [],
