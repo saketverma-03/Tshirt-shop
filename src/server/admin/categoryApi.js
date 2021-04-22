@@ -17,7 +17,7 @@ export const createCategory = (userId, token, category) => {
 
 // GET all categories //TODO:
 export const getCategorys = () =>
-  fetch(`${API}/categorys`)
+  fetch(`${API}/categorys/getAllCategorys`)
     .then((res) => res.json())
     .catch((e) => console.log(e));
 
@@ -30,14 +30,15 @@ export const updateCategory = (categoryId, userId, token, name) =>
       "Content-type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: { name: name },
+    body: JSON.stringify({ name: name }),
   })
     .then((res) => res.json())
     .catch((e) => console.error(e));
 
 // Delete Category
 export const deleteCategory = (categoryId, userId, token) =>
-  fetch(`${API}/category/updateCategory/${categoryId}/${userId}`, {
+  // category/removeCategory/:categoryId/:userId
+  fetch(`${API}/category/removeCategory/${categoryId}/${userId}`, {
     method: "DELETE",
     headers: {
       Accept: "application/json",
