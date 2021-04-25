@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { CardProduct } from "../components";
 import { headerContext } from "../context";
-import { getAllProducts, getCategorys } from "../server";
+import { addItemToCart, getAllProducts, getCategorys } from "../server";
 
 function Home(props) {
   // TODO: optemize code to make reusable functions
@@ -88,6 +88,9 @@ function Home(props) {
   };
 
   // HANDLER FUNCTIONS
+
+  // add item to cart
+
   return (
     <div className=" flex-1 h-full grid grid-cols-1 md:grid-cols-12 md:grid-rows-none">
       <div className="h-full md:col-span-3 md:row-span-full bg-indigo-50 ">
@@ -118,10 +121,11 @@ function Home(props) {
           return (
             <CardProduct
               key={product._id}
+              item={product}
               name={product.name}
               price={product.price}
+              description={product.description}
               id={product._id}
-              photo={product.photo}
             />
           );
         })}

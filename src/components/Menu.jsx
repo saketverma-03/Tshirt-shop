@@ -11,7 +11,7 @@ const Menu = () => {
       // className="md:h-12  flex items-center bg-gray-800 w-screen py-4 px-2 pr-5  "
       >
         <TabButton name="Home" to="/" />
-        <TabButton name="Cart" to="/" />
+        <TabButton name="Cart" to="/cart" />
         <h1 className="flex-1"></h1>
         {isAuthanticated() ? (
           <a onClick={handleSignout}>

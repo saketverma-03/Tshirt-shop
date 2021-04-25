@@ -3,12 +3,12 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
 // User pages
-import { Home, Login, Signup } from "./user";
+import { Home, Login, Signup, Cart } from "./user";
 // Admin Page
 import Admin from "./admin";
 
 // Protected Routes
-import { AdminRoute } from "./server";
+import { AdminRoute, PrivateRoute } from "./server";
 
 // Other stuff
 import { Base } from "./components";
@@ -27,11 +27,8 @@ const Routes = () => {
             <Route path="/Login" exact component={Login} />
             <Route path="/signup" exact component={Signup} />
             {/* Signed in Users Routes */}
-            {/* <PrivateRoute
-              path="/user/dashboard"
-              exact
-              component={UserDashBoard}
-            /> */}
+            <Route path="/cart" exact component={Cart} />
+
             {/* DdminRoutes */}
             <AdminRoute path="/admin" exact component={Admin} />
           </Switch>

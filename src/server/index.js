@@ -23,3 +23,6 @@ export {
 
 // Public Apis
 export { getProduct, getCategorys as getAllCategory } from "./public/product";
+
+// Private
+export { addItemToCart, removeItem, emptyCart } from "./private/cartLogic";
