@@ -6,11 +6,8 @@ const Menu = () => {
     let temp = menu;
     setMenu(!temp);
   };
-  /*  TODO:
-  [-] Remove bug: in md menu is cloased by default 
-  [-] Fix mobile view colors
-  [-] Add At head user Name and Menu Title may be
-  */
+  // TODO: Add At head user Name and Menu Title may be form mobile view
+
   const TabItem = ({ name, to }) => (
     <li className="p-1 text-white w-full text-md mb-3 ">
       <Link
@@ -22,7 +19,6 @@ const Menu = () => {
     </li>
   );
 
-  // TODO: animate drom pdown
   return (
     <>
       <button
