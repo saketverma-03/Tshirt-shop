@@ -10,6 +10,7 @@ const Base = ({ children }) => {
     <div className="overflow-hidden h-screen w-screen" >
       {!headhide && <Menu />}
       <div className="flex h-screen w-screen bg-indigo-100">
+     
         {/* <div className="flex-1 bg-gray-600 " > */}
         {/* <Loading /> */}
         {children}

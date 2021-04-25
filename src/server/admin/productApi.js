@@ -1,6 +1,5 @@
 import { API } from "../../port";
 
-
 // Products Call
 export const createProduct = (userId, token, product) => {
   return fetch(`${API}/product/create/${userId}`, {
@@ -12,20 +11,26 @@ export const createProduct = (userId, token, product) => {
     body: product,
   })
     .then((res) => res.json())
-    .catch((e) => console.log(e));
+    .catch((e) => {
+      throw e;
+    });
 };
 
 // Get all Products
 export const getAllProducts = () =>
   fetch(`${API}/ptoduct/getAllProducts`)
     .then((res) => res.json())
-    .catch((e) => console.log(e));
+    .catch((e) => {
+      throw e;
+    });
 
 // get a product
 export const getProduct = (productId) =>
   fetch(`${API}/product/${productId}`)
     .then((res) => res.json())
-    .catch((e) => console.log(e));
+    .catch((e) => {
+      throw e;
+    });
 
 // Update Product
 export const updateProduct = (productId, userId, token, product) => {
@@ -38,7 +43,9 @@ export const updateProduct = (productId, userId, token, product) => {
     body: product,
   })
     .then((res) => res.json())
-    .catch((e) => console.log(e));
+    .catch((e) => {
+      throw e;
+    });
 };
 
 // Delete Product
@@ -51,5 +58,7 @@ export const deleteProduct = (productId, userId, token) => {
     },
   })
     .then((res) => res.json())
-    .catch((e) => console.log(e));
+    .catch((e) => {
+      throw e;
+    });
 };

@@ -18,7 +18,9 @@ export const signout = (next) => {
       method: "Get",
     })
       .then((res) => console.log("Loged out succesfully"))
-      .catch((e) => console.log(e));
+      .catch((e) => {
+        throw e;
+      });
   }
 };
 

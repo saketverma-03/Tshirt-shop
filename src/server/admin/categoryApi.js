@@ -12,14 +12,18 @@ export const createCategory = (userId, token, category) => {
     body: JSON.stringify({ name: category }),
   })
     .then((responser) => responser.json())
-    .catch((e) => console.error(e));
+    .catch((e) => {
+      throw e;
+    });
 };
 
 // GET all categories
 export const getCategorys = () =>
   fetch(`${API}/categorys/getAllCategorys`)
     .then((res) => res.json())
-    .catch((e) => console.log(e));
+    .catch((e) => {
+      throw e;
+    });
 
 // Update Category
 export const updateCategory = (categoryId, userId, token, name) =>
@@ -33,7 +37,9 @@ export const updateCategory = (categoryId, userId, token, name) =>
     body: JSON.stringify({ name: name }),
   })
     .then((res) => res.json())
-    .catch((e) => console.error(e));
+    .catch((e) => {
+      throw e;
+    });
 
 // Delete Category
 export const deleteCategory = (categoryId, userId, token) =>
@@ -47,4 +53,6 @@ export const deleteCategory = (categoryId, userId, token) =>
     },
   })
     .then((res) => res.json())
-    .catch((e) => console.error(e));
+    .catch((e) => {
+      throw e;
+    });
