@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Suspense,lazy } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
 // User pages
-import { Home, Login, Signup, Cart } from "./user";
+import { Home, Signup, Cart } from "./user";
 // Admin Page
 import Admin from "./admin";
 
@@ -13,6 +13,7 @@ import { AdminRoute, PrivateRoute } from "./server";
 // Other stuff
 import { Base } from "./components";
 import { headerContext } from "./context";
+const Login = lazy(() => import("./user/login"))
 
 const Routes = () => {
   const [headhide, setHeadHide] = React.useState(false);
@@ -21,6 +22,7 @@ const Routes = () => {
       <ToastContainer />
       <BrowserRouter>
         <Base>
+        <Suspense fallback={<div>Loading....</div>} >
           <Switch>
             {/* Public Routes */}
             <Route path="/" exact component={Home} />
@@ -32,6 +34,7 @@ const Routes = () => {
             {/* DdminRoutes */}
             <AdminRoute path="/admin" exact component={Admin} />
           </Switch>
+          </Suspense>
         </Base>
       </BrowserRouter>
     </headerContext.Provider>

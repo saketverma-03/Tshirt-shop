@@ -13,11 +13,10 @@ const CreateProduct = () => {
     photo: "",
     formData: new FormData(),
   });
-  const { name, description, price, category, stock, photo, formData } = values;
+  const { name, description, price, stock, formData } = values;
   // const { formData } = values;
 
   const [categorys, setCategorys] = useState([]);
-  const [loading, setLoading] = useState(false);
   const { user, token } = isAuthanticated();
 
   const preload = () => {
@@ -36,7 +35,6 @@ const CreateProduct = () => {
 
   // HANdle submit
   const handleSubmit = (event) => {
-    setLoading(true);
     console.log(formData);
     event.preventDefault();
     createProduct(user._id, token, formData)
@@ -47,8 +45,7 @@ const CreateProduct = () => {
         }
         toast.success("Producted added succecefully");
       })
-      .catch((e) => console.log(e))
-      .finally((r) => setLoading(false));
+      .catch((e) => console.log(e));
   };
 
   const handelChange = (name) => (event) => {
@@ -134,9 +131,9 @@ const CreateProduct = () => {
               >
                 Category
               </label>
-              <select 
-              className="px-2 py-2 border-2  outline-none focus:border-black  border-gray-300 bg-gray-100"
-              onChange={handelChange("category")}
+              <select
+                className="px-2 py-2 border-2  outline-none focus:border-black  border-gray-300 bg-gray-100"
+                onChange={handelChange("category")}
               >
                 {categorys.map((item, i) => (
                   <option key={i} value={item._id}>

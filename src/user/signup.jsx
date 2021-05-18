@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 //otheres
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { authanticate, isAuthanticated, signin, signup } from "../server";
+import { authanticate, isAuthanticated, signup } from "../server";
 import { Redirect } from "react-router-dom";
 
 const Signin = (props) => {

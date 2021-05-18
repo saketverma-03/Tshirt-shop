@@ -12,7 +12,7 @@ const Menu = () => {
       >
         <TabButton name="Home" to="/" />
         <TabButton name="Cart" to="/cart" />
-        <h1 className="flex-1"></h1>
+        <span className="flex-1"></span>
         {isAuthanticated() ? (
           <a onClick={handleSignout}>
             <TabButton name="SignOut" />

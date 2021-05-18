@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { headerContext } from "../context";
 import Menu from "./Menu";
-import { Loading } from ".";
 
 const Base = ({ children }) => {
   const { headhide } = useContext(headerContext);

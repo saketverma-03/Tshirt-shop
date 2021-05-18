@@ -4,6 +4,7 @@ import { CardCart } from "../components";
 const Cart = () => {
   const [itemList, setItemList] = useState([]);
 
+  /* Checks if cart items exist in storage and returns an result accourdingly */
   const getItemListFromStorage = () => {
     if (typeof window !== undefined) {
       if (localStorage.getItem("cart")) {

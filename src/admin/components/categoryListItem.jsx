@@ -1,6 +1,4 @@
 import React from "react";
-import { toast } from "react-toastify";
-import { isAuthanticated } from "../../server";
 
 // Takes in Following parameters
 const categoryListItem = ({ name, handleEdit, handleDelete }) => (

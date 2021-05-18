@@ -10,17 +10,36 @@ const CardProduct = ({ name, price, id, description, item }) => {
   };
 
   return (
-    <div className="transition-colors ease-in-out rounded-ms flex border-indigo-10 border-2 shadow-sm flex-col h-96 w-full max-w-sm md:mr-3 md:h-72 md:w-72 lg:h-80 lg:w-72 mb-3 bg-white  hover:border-indigo-400">
+    <div
+      className="
+      transition-colors ease-in-out 
+      flex flex-col
+      h-96 md:h-72 lg:h-80 w-full max-w-sm md:w-72 lg:w-72 
+      mb-3 md:mr-3 rounded-ms
+      border-2 border-indigo-10 
+      shadow-sm 
+      bg-white  hover:border-indigo-400"
+    >
       <div className="h-4/6 w-full">
         <img
           className="rounded-sm h-full w-full"
           src={`${API}/product/photo/${id}`}
-          alt="A image"
+          alt={`${name}`}
         />
       </div>
-      <div className=" grid grid-cols-2 grid-rows-2 h-2/6 w-full px-3 py-1">
+      <div
+        className="
+          grid grid-cols-2 grid-rows-2 
+          h-2/6 w-full 
+          px-3 py-1"
+      >
         {/* Name of the Prodyct */}
-        <h1 className="text-sm text-gray-800 col-span-2  truncate ">
+        <h1
+          className="
+            col-span-2 
+            truncate text-sm text-gray-800
+          "
+        >
           <h1 className="font-thin text-gray-800 col-span-2  truncate ">
             {name}
           </h1>

@@ -6,7 +6,7 @@ import {
   isAuthanticated,
   updateProduct,
 } from "../server";
-import { getCategorys, createProduct } from "../server";
+import { getCategorys } from "../server";
 
 import { CategoryListItem } from "./components";
 
@@ -85,11 +85,10 @@ const UpdateProduct = ({ product, toggle }) => {
     photo: product.photo,
     formData: new FormData(),
   });
-  const { name, description, price, category, stock, photo, formData } = values;
+  const { name, description, price, stock, formData } = values;
   // const { formData } = values;
 
   const [categorys, setCategorys] = useState([]);
-  const [loading, setLoading] = useState(false);
   const { user, token } = isAuthanticated();
 
   const preload = () => {
@@ -108,7 +107,6 @@ const UpdateProduct = ({ product, toggle }) => {
 
   // HANdle submit
   const handleSubmit = (event) => {
-    setLoading(true);
     console.log(formData);
     event.preventDefault();
     updateProduct(product._id, user._id, token, formData)
@@ -119,9 +117,8 @@ const UpdateProduct = ({ product, toggle }) => {
         }
         toast.success("Producted Updated succecefully");
       })
-      .then(() => toggle({state:false,product:{}}))
-      .catch((e) => console.log(e))
-      .finally((r) => setLoading(false));
+      .then(() => toggle({ state: false, product: {} }))
+      .catch((e) => console.log(e));
   };
 
   const handelChange = (name) => (event) => {
