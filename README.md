@@ -1,36 +1,13 @@
-# h1 heading
-## h2 heading
-### H3 headind
-##### this is a norm al trext
 
-__bold text__ or **bold**
 
-_italic_ *italinc*
-
-***BOld italic***
-> THis is A Quotes
-
-this is `quote in betnm` smjj reho
+## How to run on local environment
+clone the project and run folowing caoomands
 
 ```
 npx create-react-app
 npm i 
 yarn create react-app
 ```
-[this is link](#)
-
-### List here
-- item 1
-- item 2
-
-1. item-q
-    - this
-    - ok
-2. item-c
-3. this
-
-- [x] Finish my changes
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
+addtonaly you will hav to put some  .env environment variables
 
 
